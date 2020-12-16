@@ -1,0 +1,9 @@
+SUBSYSTEM=="usb", ATTR{idVendor}=="0403",ATTR{idProduct}=="6001", MODE="0666"
+KERNEL=="hidraw*", ATTRS{busnum}=="1", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666"
+
+lsusb -v -d 0403:6001 
+Bus 001 Device 003: ID 0403:6001 Future Technology Devices International, Ltd FT232 Serial (UART) IC
+Bus 001 Device 005: ID 0483:0011 STMicroelectronics 
+
+# Set permissions to let anyone use barcode scanner
+SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="0011", MODE="666"
