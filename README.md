@@ -13,10 +13,11 @@ the service file configures the python script to run as a service on raspbian li
 
 <h1>Installation instructions</h1>
 <ul>
+  <li>find somewhere for the pi to sit which isnt conductive! </li>
   <li>First of all connect the USB adapter to the microusb socket on the rpi - it is labelled usb. Connect the rj45 jack to a network cable and connect to the switch. </li>
   <li>Connect the barcode reader to a free usb port (it doesnt matter which one) </li>
   <li>The cable carrying the power to the appliance needs to be run through the relay. The software has been configured to use relay 1 (the relays are labelled on the pcb, and its on the left if the connectors are facing towards you). if you run it through com and nc then that means the appliance will have constant voltage until a barcode is presented, when it will go off for 2s. If you want the appliance to be off and be triggered to come on when the barcode is presented, wire the 240v main through com and NO. NC = normally closed, NO = normally open. 
-  <li>connect the usb adapter to the rpi</li>
+  <li>Being careful not to touch any connectors on the pi - connect the usb adapter to the rpi</li>
 </ul>
 
 once the pi is powered on (which should be the last thing to happen), it will take about a minute for the software to become ready (has to wait for the os to start and the service to come up). You will know its ready as the relay triggers once for 2s without a barcode. Once this has happened all should be ready to test!  
