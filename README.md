@@ -22,3 +22,4 @@ the service file configures the python script to run as a service on raspbian li
 
 once the pi is powered on (which should be the last thing to happen), it will take about a minute for the software to become ready (has to wait for the os to start and the service to come up). You will know its ready as the relay triggers once for 2s without a barcode. Once this has happened all should be ready to test!  
 
+<img src=https://github.com/dobb1n/barcoderelayctrl/blob/main/IMG_3216.jpeg>
