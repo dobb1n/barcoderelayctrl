@@ -1,7 +1,9 @@
 # barcoderelayctrl
 Requirement is for a barcode presented to a usb barcode reader to trigger a 240v mains powered appliance. 
 
-A handheld, USB attached barcode reader is connected to a raspberry pi zero (or raspberry pi). The pi also has a relay hat fitted. I used [vpatron's FT245r repo](https://github.com/vpatron/relay_ft245r) with the first relay hat, and the second time, it was [this relay hat from pi hut](https://thepihut.com/products/raspberry-pi-zero-relay-hat), and i used [this guide](https://bc-robotics.com/tutorials/getting-started-raspberry-pi-relay-hat/) which says >Conveniently, the software library we need is included in the default Raspbian image. We won’t need to do much configuration in this tutorial to control the HAT! 
+A handheld, USB attached barcode reader is connected to a raspberry pi zero (or raspberry pi). The pi also has a relay hat fitted. I used [vpatron's FT245r repo](https://github.com/vpatron/relay_ft245r) with the first relay hat, and the second time, it was [this relay hat from pi hut](https://thepihut.com/products/raspberry-pi-zero-relay-hat), and i used [this guide](https://bc-robotics.com/tutorials/getting-started-raspberry-pi-relay-hat/) which says 
+
+> Conveniently, the software library we need is included in the default Raspbian image. We won’t need to do much configuration in this tutorial to control the HAT! 
 
 (Which is great! It goes on to suggest using python2.7, but we aren't backwards) We can just import RPi.GPIO and control the relay with the GPIO header pins! 
 
