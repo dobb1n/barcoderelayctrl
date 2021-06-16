@@ -1,7 +1,7 @@
 # barcoderelayctrl
 Requirement is for a barcode presented to a usb barcode reader to trigger a 240v mains powered appliance. 
 
-A handheld, USB attached barcode reader is connected to a raspberry pi zero (or raspberry pi). The pi also has a relay hat fitted. I used (vpatron's FT245r repo)[https://github.com/vpatron/relay_ft245r] with the first relay hat, and the second time, it was (this relay hat from pi hut)[https://thepihut.com/products/raspberry-pi-zero-relay-hat], and i used (this guide)[https://bc-robotics.com/tutorials/getting-started-raspberry-pi-relay-hat/] which says >Conveniently, the software library we need is included in the default Raspbian image. We won’t need to do much configuration in this tutorial to control the HAT! 
+A handheld, USB attached barcode reader is connected to a raspberry pi zero (or raspberry pi). The pi also has a relay hat fitted. I used [vpatron's FT245r repo](https://github.com/vpatron/relay_ft245r) with the first relay hat, and the second time, it was [this relay hat from pi hut](https://thepihut.com/products/raspberry-pi-zero-relay-hat), and i used [this guide](https://bc-robotics.com/tutorials/getting-started-raspberry-pi-relay-hat/) which says >Conveniently, the software library we need is included in the default Raspbian image. We won’t need to do much configuration in this tutorial to control the HAT! 
 
 (Which is great! It goes on to suggest using python2.7, but we aren't backwards) We can just import RPi.GPIO and control the relay with the GPIO header pins! 
 
@@ -11,10 +11,10 @@ The idea is that, a barcode is presented to the reader, it is checked against a 
 
 ## Hardware
 * a pizero. 
-* a (relay hat)[https://thepihut.com/products/raspberry-pi-zero-relay-hat] 
+* [a relay hat](https://thepihut.com/products/raspberry-pi-zero-relay-hat)
 * A usb barcode reader. 
 
-I have managed to get this working on a couple of different types of barcode reader. The first was a cheap handheld alacrity thing from amazon. It worked fine and i used (vPatron's barcode reader)[https://github.com/vpatron/barcode_scanner_python] to control the input from the usb device. The second time it was another alacrity reader, but i found it easier to control with (this one )[https://github.com/julzhk/usb_barcode_scanner.git]. With both, some jiggery pokery was required to avoid having to escalate to get control of the device. (This was useful)[https://doc.sccode.org/Guides/HID_permissions.html]
+I have managed to get this working on a couple of different types of barcode reader. The first was a cheap handheld alacrity thing from amazon. It worked fine and i used [vPatron's barcode reader](https://github.com/vpatron/barcode_scanner_python) to control the input from the usb device. The second time it was another alacrity reader, but i found it easier to control with [this one ](https://github.com/julzhk/usb_barcode_scanner.git). With both, some jiggery pokery was required to avoid having to escalate to get control of the device. [This was useful](https://doc.sccode.org/Guides/HID_permissions.html)
 
 the service file configures the python script to run as a service on raspbian lite. 
 
